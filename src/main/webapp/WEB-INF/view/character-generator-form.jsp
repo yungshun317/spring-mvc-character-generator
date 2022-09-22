@@ -4,7 +4,7 @@
     <title>Character Generator - Input Form</title>
 </head>
 <body>
-    <form action="characterGenerator" method="GET">
+    <form action="processForm" method="GET">
         <input type="text" name="name" placeholder="Character Name" />
         <input type="submit">
     </form>
