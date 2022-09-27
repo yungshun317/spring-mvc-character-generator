@@ -14,11 +14,16 @@
 Character Generator
 
 <br><br>
-
+<!--
 Name: ${param.name}
+-->
+Name: ${character.firstName} ${character.lastName}
 
 <br><br>
-
+<!--
 Message: ${message}
+-->
+Country: ${character.country}
+
 </body>
 </html>

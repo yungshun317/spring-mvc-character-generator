@@ -2,6 +2,7 @@ package yungshun.chang.springmvccharactergenerator;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -11,9 +12,22 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/characterGenerator")
 public class CharacterGeneratorController {
 
-    // Need a controller method to show the initial HTML form
+    /* Need a controller method to show the initial HTML form
     @RequestMapping("/showForm")
     public String showForm() {
+        return "character-generator-form";
+    }
+     */
+
+    @RequestMapping("/showForm")
+    public String showForm(Model model) {
+
+        // Create a character generator object
+        CharacterGenerator characterGenerator = new CharacterGenerator();
+
+        // Add character generator object to the model
+        model.addAttribute("character", characterGenerator);
+
         return "character-generator-form";
     }
 
@@ -41,7 +55,7 @@ public class CharacterGeneratorController {
     }
      */
 
-    // Not longer need `String name = request.getParameter("name");`
+    /* No longer need `String name = request.getParameter("name");`
     @RequestMapping("/processForm")
     public String generateCharacter(@RequestParam("name") String name, Model model) {
         // Create the message
@@ -49,6 +63,16 @@ public class CharacterGeneratorController {
 
         // Add message to the model
         model.addAttribute("message", message);
+
+        return "character-generator";
+    }
+     */
+
+    @RequestMapping("/processForm")
+    public String generateCharacter(@ModelAttribute("character") CharacterGenerator characterGenerator) {
+
+        // Log the input data
+        System.out.println("character: " + characterGenerator.getFirstName() + " " + characterGenerator.getLastName());
 
         return "character-generator";
     }
