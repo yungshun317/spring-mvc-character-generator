@@ -7,6 +7,8 @@ public class CharacterGenerator {
     private String firstName;
     private String lastName;
 
+    private String gender;
+
     private String country;
 
     private LinkedHashMap<String, String> countryOptions;
@@ -37,6 +39,14 @@ public class CharacterGenerator {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public String getCountry() {

@@ -17,6 +17,10 @@
        <br><br>
        Last Name: <form:input path="lastName" />
        <br><br>
+       Gender:
+       Male <form:radiobutton path="gender" value="Male" />
+       Female <form:radiobutton path="gender" value="Female" />
+       <br><br>
        Country:
        <form:select path="country">
            <form:options items="${character.countryOptions}" />

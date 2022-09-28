@@ -18,7 +18,8 @@ Character Generator
 Name: ${param.name}
 -->
 Name: ${character.firstName} ${character.lastName}
-
+<br><br>
+Gender: ${character.gender}
 <br><br>
 <!--
 Message: ${message}
