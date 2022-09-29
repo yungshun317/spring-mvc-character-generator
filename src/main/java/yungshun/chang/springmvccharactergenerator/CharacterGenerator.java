@@ -1,10 +1,15 @@
 package yungshun.chang.springmvccharactergenerator;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.LinkedHashMap;
 
 public class CharacterGenerator {
 
     private String firstName;
+
+    @NotNull(message="is required")
+    @Size(min=1, message="is required")
     private String lastName;
 
     private String gender;
