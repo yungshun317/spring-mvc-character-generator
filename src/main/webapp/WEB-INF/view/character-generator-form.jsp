@@ -26,6 +26,13 @@
            <form:options items="${character.countryOptions}" />
        </form:select>
        <br><br>
+       Positive Personality:
+       Smart <form:checkbox path="positivePersonality" value="Smart" />
+       Inspiring <form:checkbox path="positivePersonality" value="Inspiring" />
+       Brave <form:checkbox path="positivePersonality" value="Brave" />
+       Loveable <form:checkbox path="positivePersonality" value="Loveable" />
+       Energetic <form:checkbox path="positivePersonality" value="Energetic" />
+       <br><br>
        <input type="submit" value="Submit" />
    </form:form>
 </body>

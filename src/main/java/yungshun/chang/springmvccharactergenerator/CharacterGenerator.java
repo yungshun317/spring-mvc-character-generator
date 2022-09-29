@@ -13,6 +13,8 @@ public class CharacterGenerator {
 
     private LinkedHashMap<String, String> countryOptions;
 
+    private String[] positivePersonality;
+
     public CharacterGenerator() {
 
         // Populate country options: used ISO country code
@@ -59,5 +61,13 @@ public class CharacterGenerator {
 
     public LinkedHashMap<String, String> getCountryOptions() {
         return countryOptions;
+    }
+
+    public String[] getPositivePersonality() {
+        return positivePersonality;
+    }
+
+    public void setPositivePersonality(String[] positivePersonality) {
+        this.positivePersonality = positivePersonality;
     }
 }
