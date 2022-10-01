@@ -27,6 +27,9 @@
        Male <form:radiobutton path="gender" value="Male" />
        Female <form:radiobutton path="gender" value="Female" />
        <br><br>
+       Age: <form:input path="age" />
+       <form:errors path="age" cssClass="error" />
+       <br><br>
        Country:
        <form:select path="country">
            <form:options items="${character.countryOptions}" />

@@ -22,6 +22,8 @@ Name: ${character.firstName} ${character.lastName}
 <br><br>
 Gender: ${character.gender}
 <br><br>
+Age: ${character.age}
+<br><br>
 <!--
 Message: ${message}
 -->

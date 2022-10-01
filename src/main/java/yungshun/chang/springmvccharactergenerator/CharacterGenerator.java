@@ -1,5 +1,7 @@
 package yungshun.chang.springmvccharactergenerator;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.LinkedHashMap;
@@ -13,6 +15,10 @@ public class CharacterGenerator {
     private String lastName;
 
     private String gender;
+
+    @Min(value=0, message="must be greater than or equal to zero")
+    @Max(value=120, message="must be less than or equal to 120")
+    private int age;
 
     private String country;
 
@@ -55,6 +61,10 @@ public class CharacterGenerator {
     public void setGender(String gender) {
         this.gender = gender;
     }
+
+    public int getAge() { return age; }
+
+    public void setAge(int age) { this.age = age; }
 
     public String getCountry() {
         return country;

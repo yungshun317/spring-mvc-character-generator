@@ -24,6 +24,9 @@ public class CharacterGeneratorController {
     }
      */
 
+    // Add an `initbinder` to convert trim input strings
+    // Remove leading and trailing whitespace
+    // Resolve issue for our validation
     @InitBinder
     public void initBinder(WebDataBinder dataBinder) {
 
