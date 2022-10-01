@@ -35,6 +35,9 @@
            <form:options items="${character.countryOptions}" />
        </form:select>
        <br><br>
+       Postal Code: <form:input path="postalCode" />
+        <form:errors path="postalCode" cssClass="error" />
+       <br><br>
        Positive Personality:
        Smart <form:checkbox path="positivePersonality" value="Smart" />
        Inspiring <form:checkbox path="positivePersonality" value="Inspiring" />

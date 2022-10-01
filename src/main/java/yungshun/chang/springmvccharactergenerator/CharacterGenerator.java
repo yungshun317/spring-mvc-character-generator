@@ -1,9 +1,6 @@
 package yungshun.chang.springmvccharactergenerator;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.util.LinkedHashMap;
 
 public class CharacterGenerator {
@@ -23,6 +20,9 @@ public class CharacterGenerator {
     private String country;
 
     private LinkedHashMap<String, String> countryOptions;
+
+    @Pattern(regexp="^[a-zA-Z0-9]{5}", message="only 5 chars/digits")
+    private String postalCode;
 
     private String[] positivePersonality;
 
@@ -76,6 +76,14 @@ public class CharacterGenerator {
 
     public LinkedHashMap<String, String> getCountryOptions() {
         return countryOptions;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
     }
 
     public String[] getPositivePersonality() {

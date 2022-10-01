@@ -29,6 +29,8 @@ Message: ${message}
 -->
 Country: ${character.country}
 <br><br>
+Postal Code: ${character.postalCode}
+<br><br>
 Positive Personality:
 <ul>
     <c:forEach var="temp" items="${character.positivePersonality}">
