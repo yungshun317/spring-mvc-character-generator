@@ -13,9 +13,10 @@ public class CharacterGenerator {
 
     private String gender;
 
+    @NotNull(message="is required")
     @Min(value=0, message="must be greater than or equal to zero")
     @Max(value=120, message="must be less than or equal to 120")
-    private int age;
+    private Integer age;
 
     private String country;
 
@@ -62,9 +63,9 @@ public class CharacterGenerator {
         this.gender = gender;
     }
 
-    public int getAge() { return age; }
+    public Integer getAge() { return age; }
 
-    public void setAge(int age) { this.age = age; }
+    public void setAge(Integer age) { this.age = age; }
 
     public String getCountry() {
         return country;
